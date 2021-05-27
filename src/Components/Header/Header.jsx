@@ -1,16 +1,31 @@
-import { NavLink, Link } from "react-router-dom";
+import { Portrait } from "../../Pages/About/Portrait/Portrait";
 import "./Header.css";
-
+import {Navbar, NavbarBrand, NavLink} from "react-bootstrap"
+import { LinkContainer } from "react-router-bootstrap";
 
 export function Header(){
     return(
-        <div className="header-menu">           
-            <div className="header-buttons">
-                <NavLink to="/" activeClassName="selected-link" exact>About Me</NavLink>
-                <NavLink to="/cv" activeClassName="selected-link" exact>CV</NavLink>
-                <NavLink to="/personal" activeClassName="selected-link" exact>Who I really am</NavLink>
-                <NavLink to="/contact" activeClassName="selected-link" exact>Contact</NavLink>
-            </div>
-        </div>
+            <Navbar collapseOnSelect expand="md" sticky="top">
+                <NavbarBrand href="/">
+                    <Portrait/>
+                </NavbarBrand>
+                <Navbar.Toggle aria-controls="menu-buttons"/>
+                <Navbar.Collapse id="menu-buttons">
+                    <LinkContainer to="/about">
+                        <NavLink>About Me</NavLink>
+                    </LinkContainer>
+                    <LinkContainer to="/cv">
+                        <NavLink >CV</NavLink>
+                    </LinkContainer>
+                    <LinkContainer to="/personal">
+                        <NavLink>Personal</NavLink>
+                    </LinkContainer>
+                    <LinkContainer to="/contact" >
+                        <NavLink>Contact</NavLink>
+                    </LinkContainer>
+                </Navbar.Collapse>
+            </Navbar>
+
+                
     );
 }

@@ -1,0 +1,58 @@
+.portrait-cv{
+    min-width: 50px;
+    max-width: 200px;
+    min-height: 50px;
+    max-height: 200px;
+    /* height: 200px; */
+    display: flex;
+    justify-self: center;
+}
+
+div.left-side.col > {
+    display: flex;
+    justify-content: center;
+}
+
+div.right-side.col {
+
+}
+
+.introduction {
+    text-align: justify;
+    white-space: pre-wrap;
+}
+/* .introduction >p{
+    text-align: justify;
+} */
+
+h1 {
+    color: whitesmoke;
+}
+
+#skills-icon {
+    max-width: 40px;
+    /* min-width: 20px; */
+    display: flex;
+}
+img#skills-icon{
+    justify-self: flex-end;
+}
+
+.icon-image {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: whitesmoke; */
+}
+#skills-icon{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.col-md-9>li{
+    font-size: 18px;
+    font-weight: 600;
+}
+a{
+    color: whitesmoke;
+}
