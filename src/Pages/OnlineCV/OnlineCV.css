@@ -21,29 +21,26 @@ div.right-side.col {
     text-align: justify;
     white-space: pre-wrap;
 }
-/* .introduction >p{
+p{
     text-align: justify;
-} */
+}
 
-h1 {
+h1,h4,h5 {
     color: whitesmoke;
 }
 
-#skills-icon {
-    max-width: 40px;
-    /* min-width: 20px; */
-    display: flex;
-}
-img#skills-icon{
+img#skills-icon, img#studies-icon, img#work-icon{
     justify-self: flex-end;
 }
 
 .icon-image {
     display: flex;
     justify-content: flex-end;
-    /* background-color: whitesmoke; */
 }
-#skills-icon{
+
+#skills-icon, #studies-icon, #work-icon{
+    max-width: 40px;
+    display: flex;
     background-color: whitesmoke;
     border-radius: 10px;
     padding: 5px
@@ -55,4 +52,12 @@ img#skills-icon{
 }
 a{
     color: whitesmoke;
+}
+.right-side>p,.right-side>p>a{
+    word-wrap: break-word;
+}
+
+.row,.col{
+    display: flex;
+    align-items: center;
 }

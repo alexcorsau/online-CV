@@ -10,7 +10,7 @@ export const user={
         LinkedIn:"https://www.linkedin.com/in/alex-corsau/",
         GitHub:"https://github.com/alexcorsau"
     },
-    Introduction: `Proactive engineer producing high-quality work by applying determination and attention to detail. Performance-oriented and enterprising leader with organized nature and analytical problem-solving approach.\nLooking for a career change to Web Development with willingness to learn, evolve and perform.`,
+    Introduction: ["Proactive engineer producing high-quality work by applying determination and attention to detail. Performance-oriented and enterprising leader with organized nature and analytical problem-solving approach.","Looking for a career change to Web Development with willingness to learn, evolve and perform."],
     Skills: ["JavaScript","HTML","React","CSS","Git"],
     Education: [
         {
