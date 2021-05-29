@@ -5,11 +5,7 @@ import { SendButton } from "./SendButton/SendButton";
 import { ConfirmationMessage } from "./ConfirmationMessage/ConfirmationMessage";
 import emailjs from "emailjs-com";
 
-
 import "./Form.css";
-// (function(){
-//             emailjs.init("user_WvMNmVXWN02GuqFs101UK");
-//         })();
 export class Form extends Component {
 
     state = {
@@ -84,37 +80,39 @@ export class Form extends Component {
 
     render(){
         return (
-            <div id="contact-form" className="contact-form">
-                <FormField 
-                    key="name"
-                    id="name"
-                    label="Name" 
-                    handleChange={this.handleChange}
-                    invalid = {this.state.nameIsValid}
-                />
-                
-                <FormField 
-                    key="email"
-                    id="email"
-                    label="Email" 
-                    handleChange={this.handleChange}
-                    invalid = {this.state.emailIsValid}
-                />
+            <div id="form-div">
+                <div id="contact-form" className="contact-form">
+                    <FormField 
+                        key="name"
+                        id="name"
+                        label="Name" 
+                        handleChange={this.handleChange}
+                        invalid = {this.state.nameIsValid}
+                    />
+                    
+                    <FormField 
+                        key="email"
+                        id="email"
+                        label="Email" 
+                        handleChange={this.handleChange}
+                        invalid = {this.state.emailIsValid}
+                    />
 
-                <FormMessage 
-                    key="message"
-                    id="message"
-                    label="Message" 
-                    handleChange={this.handleChange}
-                    invalid = {this.state.messageIsValid}
-                />
+                    <FormMessage 
+                        key="message"
+                        id="message"
+                        label="Message" 
+                        handleChange={this.handleChange}
+                        invalid = {this.state.messageIsValid}
+                    />
 
-                <SendButton
-                    handleSend={this.handleSend}
-                />
+                    <SendButton
+                        handleSend={this.handleSend}
+                    />
 
-                {this.state.sentData ? <ConfirmationMessage closeMessage={this.closeMessage}/> : null }
-                
+                    {this.state.sentData ? <ConfirmationMessage closeMessage={this.closeMessage}/> : null }
+                    
+                </div>
             </div>
         ) 
     }

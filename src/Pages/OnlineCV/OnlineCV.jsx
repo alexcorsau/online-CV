@@ -41,7 +41,7 @@ export function OnlineCV(){
     return({user}!=null ?     
             <Container fluid>
                 <Row className="align-items-center">
-                    <Col className="left-side col-md-3 offset-md-1">
+                    <Col className="left-side col-3 offset-1">
                         <div className="portrait-cv">
                             <Portrait/>
                         </div>
@@ -55,25 +55,26 @@ export function OnlineCV(){
                         let email=`mailto:${element[1]}`;
                         return(
                             <Row key={element[0]} className="personal-data">
-                               <Col className="left-side col-3 offset-1"><p>{element[0]}:</p></Col>
-                               <Col className="right-side col-8"><p><a href={email}>{element[1]}</a></p></Col>
+                               <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
+                               <Col className="right-side col-10 col-sm-9"><p><a href={email}>{element[1]}</a></p></Col>
                            </Row>
                             )}
                     else if(element[0]==="LinkedIn"||element[0]==="GitHub") {
                         return(
                             <Row key={element[0]} className="personal-data">
-                               <Col className="left-side col-3 offset-1"><p>{element[0]}:</p></Col>
-                               <Col className="right-side col-8"><p><a href={element[1]} target="_blank" rel="noreferrer">{element[1]}</a></p></Col>
+                               <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
+                               <Col className="right-side col-10 col-sm-9"><p><a href={element[1]} target="_blank" rel="noreferrer">{element[1]}</a></p></Col>
                            </Row>
                             )}
                             else return(
                                 <Row key={element[0]} className="personal-data">
-                                    <Col className="left-side col-3 offset-1"><p>{element[0]}:</p></Col>
-                                    <Col className="right-side col-8"><p>{element[1]}</p></Col>
+                                    <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
+                                    <Col className="right-side col-10 col-sm-9"><p>{element[1]}</p></Col>
                                 </Row>
                             )
                     })
                 }
+
                 {
                     user.Introduction.map(element=>(
                         <Row className="introduction">
@@ -83,7 +84,7 @@ export function OnlineCV(){
                         </Row>
                     ))
                 }
-                
+                {/* user.Skills */}
                 <Row>
                     <Col className="col-2 icon-image">
                         <Image id="skills-icon" src={skillsIcon} alt="skills-img"></Image>
@@ -96,7 +97,7 @@ export function OnlineCV(){
                     user.Skills.map(element=>{
                         return(
                             <Row className="justify-content-between">
-                                <Col className="col-10 offset-2"><p><li>{element}</li></p></Col>
+                                <Col className="col-11 offset-1"><p><li>{element}</li></p></Col>
                             </Row>
                         )
                     })
@@ -114,7 +115,7 @@ export function OnlineCV(){
                     user.Education.map(element=>{
                         return(
                             <Row className="justify-content-between workplace">
-                                <Col className="col-10 offset-2"><p><li>{element.Diploma} - {element.School} / {element.DiplomaDate}</li></p></Col>
+                                <Col className="col-12"><p><li>{element.Diploma} - {element.School} / {element.DiplomaDate}</li></p></Col>
                 
                             </Row>
                             
@@ -136,10 +137,10 @@ export function OnlineCV(){
                         return(
                             <Fragment>
                                 <Row className="justify-content-between workplace">
-                                <Col className="col-10 offset-2"><h5><li>{element.Company} - {element.Position} / {element.Period}</li></h5></Col>
+                                <Col className="col-11 offset-1"><h5><li>{element.Company} - {element.Position} / {element.Period}</li></h5></Col>
                             </Row>
                             {element.Roles.map(role=>(<Row>
-                                    <Col className="col-9 offset-3">
+                                    <Col className="col-12">
                                         <p><li key={role.indexOf()}>{role}</li></p>
                                     </Col>
                                 </Row>))
@@ -150,7 +151,7 @@ export function OnlineCV(){
                     })
                 }
                 <Row className="justify-content-center download-row">
-                    <Col className="col-2 download-col">
+                    <Col className="col-12 download-col align-self-center">
                         <a href="../alex-corsau-resume.pdf" target="_blank">Download CV</a>
                     </Col>
                 </Row>
