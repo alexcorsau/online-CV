@@ -1,0 +1,7 @@
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}

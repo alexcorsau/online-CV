@@ -1,0 +1,13 @@
+.player {
+    visibility: hidden;
+    height: 1px;
+}
+q{
+    text-align: justify;
+    text-justify:newspaper;
+    color: whitesmoke;
+}
+.quote-owner {
+    font-size: 12px;
+    text-align: end;
+}
