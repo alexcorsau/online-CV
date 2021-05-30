@@ -26,7 +26,7 @@ export function Personal(){
             </div>
             <PicturesCarousel/>
             <div className="video-options">
-                <button id="volume" onClick={handleMute}><img src={mute?unmuteIcon:muteIcon} alt="oups"></img></button>
+                <button id="volume" onClick={handleMute}><img src={mute?unmuteIcon:muteIcon} alt="mute"></img></button>
                 <a href="https://www.youtube.com/watch?v=6EA-MIYY1bg&list=RD6EA-MIYY1bg&start_radio=1&rv=6EA-MIYY1bg&t=3" target="_blank" rel="noreferrer" className="link-to-youtube">Listen more</a>
             </div>
         </div>

@@ -20,7 +20,7 @@ export function OnlineCV(){
     
     useEffect(()=>{
       getData()
-    });
+    },[]);
 
     return(user!==null ? 
             <Container fluid>

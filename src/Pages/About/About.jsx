@@ -1,10 +1,21 @@
 import { Portrait } from "./Portrait/Portrait";
-import {user} from "../OnlineCV/Alex";
+import {useEffect, useState} from "react";
 
 import "./About.css";
 
 export function About(){
-    return(
+    const [user,setUser]=useState(null);
+
+    const getData=()=>{
+      fetch("alex.json")
+        .then(r=>r.json())
+        .then(json=>setUser(json));
+    }
+    
+    useEffect(()=>{
+      getData()
+    },[]);
+    return(user!==null ? 
         <div className="about">
             <div className="portrait-about">
                 <Portrait/>
@@ -25,5 +36,5 @@ export function About(){
                 <hr/>
             </article>
         </div>
-    )
+    : <p>"bad job at fetching data"</p>)
 }

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { CarouselItem } from 'react-bootstrap';
 import {useEffect, useState} from "react";
-// import {CarouselPictures} from "./CarouselPictures"
 
 import "./Carousel.css"
 
@@ -18,7 +17,7 @@ export function PicturesCarousel() {
     
     useEffect(()=>{
       getData()
-    });
+    },[]);
     
     return ( pictureSource!==null ? 
             <Carousel pause="hover" controls={true}>
@@ -27,7 +26,7 @@ export function PicturesCarousel() {
                         <CarouselItem key={pictureSource.sources.indexOf(element)}>
                             <img className="carousel-picture" src={process.env.PUBLIC_URL+element} alt={element}/>
                             <Carousel.Caption>
-                                <p>Image number {pictureSource.sources.indexOf(element)+1}/{pictureSource.sources.length}</p>
+                                <p>Slide {pictureSource.sources.indexOf(element)+1}/{pictureSource.sources.length}</p>
                             </Carousel.Caption>
                         </CarouselItem>
                     ))
