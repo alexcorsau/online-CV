@@ -3,7 +3,6 @@
     max-width: 200px;
     min-height: 50px;
     max-height: 200px;
-    /* height: 200px; */
     display: flex;
     justify-self: center;
 }
@@ -46,6 +45,10 @@ h1,h4,h5 {
 a{
     color: whitesmoke;
 }
+p.cv-text {
+    color: whitesmoke;
+}
+
 .right-side>*{
     word-wrap: break-word;
     padding-left: 20px;

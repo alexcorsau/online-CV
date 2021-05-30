@@ -1,17 +1,41 @@
 .about { 
-    width: 100%;
-    display: inline-flex;
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 40px;
+    box-shadow: turquoise;
+    background-color: whitesmoke;
 }
-.about-portrait {
-    width:100px;
-    height: 100px;
-    margin-right: 20px;
-}
+
 
 article.description {
-    
+    text-indent: 10%;
+    text-justify:distribute;
+    margin: 15px;
+    display: block;
+    margin-top: 10px;
+    max-width: 600px;
+    color: black;
+}
+article.description>p{
+    font: black;
 }
 
-article.description > h3,p {
-    color: whitesmoke;
+article.personal-info {
+    text-indent: 10%;
+    margin: 15px;
+    margin-top: 10px;
+    display: block;
+    max-width: 600px;
+    color: black;
 }
+
+.portrait-about{
+    margin: 10px;
+}
+
+
+

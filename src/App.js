@@ -26,11 +26,8 @@ function App() {
         <Route path="/contact">
           <Form/>
         </Route>
-         <Route path="/about">
+         <Route path="/">
           <About/>
-        </Route>
-        <Route path="/">
-          <Home/>
         </Route>
       </Switch>
 

@@ -31,7 +31,6 @@ export function Header(){
         document.getElementById("app").removeEventListener('scroll', handleScroll)
       }
     }, []);
-    // console.log((document.getElementById("app")).scrollTop);
     return(
             <Navbar collapseOnSelect expand="sm" sticky="top" className={navBackground ? "navbar-withbackground" : ""}>
                 <NavbarBrand href="/">
@@ -39,7 +38,7 @@ export function Header(){
                 </NavbarBrand>
                 <Navbar.Toggle aria-controls="menu-buttons"/>
                 <Navbar.Collapse id="menu-buttons">
-                    <LinkContainer to="/about">
+                    <LinkContainer to="/">
                         <NavLink>About Me</NavLink>
                     </LinkContainer>
                     <LinkContainer to="/cv">

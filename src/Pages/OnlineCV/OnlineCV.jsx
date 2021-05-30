@@ -55,21 +55,21 @@ export function OnlineCV(){
                         let email=`mailto:${element[1]}`;
                         return(
                             <Row key={element[0]} className="personal-data">
-                               <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
+                               <Col className="left-side col-4 col-sm-3"><p className="cv-text">{element[0]}:</p></Col>
                                <Col className="right-side col-10 col-sm-9"><p><a href={email}>{element[1]}</a></p></Col>
                            </Row>
                             )}
                     else if(element[0]==="LinkedIn"||element[0]==="GitHub") {
                         return(
                             <Row key={element[0]} className="personal-data">
-                               <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
+                               <Col className="left-side col-4 col-sm-3"><p className="cv-text">{element[0]}:</p></Col>
                                <Col className="right-side col-10 col-sm-9"><p><a href={element[1]} target="_blank" rel="noreferrer">{element[1]}</a></p></Col>
                            </Row>
                             )}
                             else return(
                                 <Row key={element[0]} className="personal-data">
-                                    <Col className="left-side col-4 col-sm-3"><p>{element[0]}:</p></Col>
-                                    <Col className="right-side col-10 col-sm-9"><p>{element[1]}</p></Col>
+                                    <Col className="left-side col-4 col-sm-3"><p className="cv-text">{element[0]}:</p></Col>
+                                    <Col className="right-side col-10 col-sm-9"><p className="cv-text">{element[1]}</p></Col>
                                 </Row>
                             )
                     })
@@ -79,7 +79,7 @@ export function OnlineCV(){
                     user.Introduction.map(element=>(
                         <Row key={element} className="introduction">
                             <Col>
-                                <p>{element}</p>
+                                <p className="cv-text">{element}</p>
                             </Col>
                         </Row>
                     ))
@@ -97,7 +97,7 @@ export function OnlineCV(){
                     user.Skills.map(element=>{
                         return(
                             <Row key={element} className="justify-content-between">
-                                <Col className="col-11 offset-1"><p><li>{element}</li></p></Col>
+                                <Col className="col-11 offset-1"><p className="cv-text"><li>{element}</li></p></Col>
                             </Row>
                         )
                     })
@@ -115,7 +115,7 @@ export function OnlineCV(){
                     user.Education.map(element=>{
                         return(
                             <Row key={element.Diploma} className="justify-content-between workplace">
-                                <Col className="col-12"><p><li>{element.Diploma} - {element.School} / {element.DiplomaDate}</li></p></Col>
+                                <Col className="col-12"><p className="cv-text"><li>{element.Diploma} - {element.School} / {element.DiplomaDate}</li></p></Col>
                 
                             </Row>
                             
@@ -141,7 +141,7 @@ export function OnlineCV(){
                             </Row>
                             {element.Roles.map(role=>(<Row key={role}>
                                     <Col className="col-12">
-                                        <p><li key={role.indexOf()}>{role}</li></p>
+                                        <p className="cv-text"><li key={role.indexOf()}>{role}</li></p>
                                     </Col>
                                 </Row>))
                             }   

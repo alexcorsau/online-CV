@@ -1,21 +1,33 @@
 import "./About.css"
 import { Portrait } from "./Portrait/Portrait"
-
+import {user} from "../OnlineCV/Alex"
 
 
 
 export function About(){
     return(
-        <div className="about"  >
-           <aside className="about-portrait">
+        <div className="about">
+            <div className="portrait-about">
                 <Portrait/>
-           </aside>
-           <article className="description">
-                <h3>Description</h3>
+            </div>
+            
+            <article className="description">
+                {
+                user.AboutMe.map(element=>(
+                    <p key={element}>{element}</p>
+                    ))
+                }
+                <hr/>
+            </article>
+            <article className="personal-info">
                 <p>
-                    The description is just a paragraf hardcoded in HTML
+                    {user.PersonalInfo}
                 </p>
-           </article>
+                <hr/>
+            </article>
+            <div>
+                
+            </div>
         </div>
     )
 }

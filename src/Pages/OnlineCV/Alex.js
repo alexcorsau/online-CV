@@ -50,6 +50,7 @@ export const user={
             Roles: ["Supervised contractor work processes and adherence to project schedule","Supported work of superintendents and liaised with off-site designers","Read plans and blueprints and communicated to workers"]
         }
     ],
-    Description:"",
+    AboutMe: ["Hello, my name is Alex","I am glad you ended up on this site, this means you want to get to know me: I am a man of few words (some might consider less then enough) and I try to compensate with what I do. I recently rediscovered my passion about solving problems and this is what drove me to take this path: a professional reconversion to Web Development; I admit I got a little help choosing this path from many in the IT bussines but I am glad and gratefull for this as it turned out to be a perfect fit: I am constantly thinking about what I can do better and more every second of the day."],
+    PersonalInfo: ["I grew up in Turda, near Cluj-Napoca, graduated from highschool studing mathematics and information technology; after finishing highschool wanted to become a police officer but some medical issues stopped from reaching the exams and chosen construction field, installations for civil buildings to be more exact. After 10 years in this field I reached a point where I had no more challenges and this is how I ended up taking this Web Development course"]
 }
     
