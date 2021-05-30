@@ -44,3 +44,9 @@ span.navbar-toggler-icon {
 .show {
     /* justify-content: flex-end; */
 }
+
+.navbar-withbackground {
+    background-color:rgb(44, 83, 155) !important;
+    opacity: 0.9;
+    border-radius: 8px;
+}

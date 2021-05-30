@@ -50,6 +50,6 @@ export const user={
             Roles: ["Supervised contractor work processes and adherence to project schedule","Supported work of superintendents and liaised with off-site designers","Read plans and blueprints and communicated to workers"]
         }
     ],
-    PersonalInfo:"",
+    Description:"",
 }
     

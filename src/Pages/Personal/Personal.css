@@ -2,12 +2,51 @@
     visibility: hidden;
     height: 1px;
 }
+.quote-div{
+    width: fit-content;
+    margin: auto;
+}
+
 q{
     text-align: justify;
     text-justify:newspaper;
     color: whitesmoke;
+    font-style: italic;
 }
 .quote-owner {
     font-size: 12px;
     text-align: end;
+}
+.personal-div {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.link-to-youtube{
+    color: black;
+    font-size:medium;
+    font-weight: 500;
+}
+
+.video-options{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#volume  {
+    width: 30px !important;
+    height: 30px !important;
+    background: none;
+    /* border: 1px solid grey;
+    border-radius: 50%; */
+    border:none;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+button>img{
+    width: 15px;
+    height: 15px;
+    background:none;
 }

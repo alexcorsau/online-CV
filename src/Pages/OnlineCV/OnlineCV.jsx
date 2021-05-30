@@ -47,7 +47,7 @@ export function OnlineCV(){
                         </div>
                     </Col>
                     <Col className="right-side col-8">
-                        <h1>Alex Corsau</h1>
+                        <h1>{user.FirstName} {user.Lastname}</h1>
                     </Col>
                 </Row>
                 {Object.entries(user.PersonalData).map(element => {
@@ -77,7 +77,7 @@ export function OnlineCV(){
 
                 {
                     user.Introduction.map(element=>(
-                        <Row className="introduction">
+                        <Row key={element} className="introduction">
                             <Col>
                                 <p>{element}</p>
                             </Col>
@@ -96,7 +96,7 @@ export function OnlineCV(){
                 {
                     user.Skills.map(element=>{
                         return(
-                            <Row className="justify-content-between">
+                            <Row key={element} className="justify-content-between">
                                 <Col className="col-11 offset-1"><p><li>{element}</li></p></Col>
                             </Row>
                         )
@@ -114,7 +114,7 @@ export function OnlineCV(){
                 {
                     user.Education.map(element=>{
                         return(
-                            <Row className="justify-content-between workplace">
+                            <Row key={element.Diploma} className="justify-content-between workplace">
                                 <Col className="col-12"><p><li>{element.Diploma} - {element.School} / {element.DiplomaDate}</li></p></Col>
                 
                             </Row>
@@ -135,11 +135,11 @@ export function OnlineCV(){
                     // user.WorkHistory
                     user.WorkHistory.map(element=>{
                         return(
-                            <Fragment>
-                                <Row className="justify-content-between workplace">
-                                <Col className="col-11 offset-1"><h5><li>{element.Company} - {element.Position} / {element.Period}</li></h5></Col>
+                            <Fragment key={`${element.Company}+${element.Position}+${element.Period}`}>
+                                <Row key={`${element.Company}+${element.Period}`} className="justify-content-between workplace">
+                                <Col key={element.Period} className="col-11 offset-1"><h5><li>{element.Company} - {element.Position} / {element.Period}</li></h5></Col>
                             </Row>
-                            {element.Roles.map(role=>(<Row>
+                            {element.Roles.map(role=>(<Row key={role}>
                                     <Col className="col-12">
                                         <p><li key={role.indexOf()}>{role}</li></p>
                                     </Col>
@@ -156,5 +156,5 @@ export function OnlineCV(){
                     </Col>
                 </Row>
             </Container>
-    : <p>"bad job"</p>);
+    : <p>"bad job at fetching data"</p>);
 }
