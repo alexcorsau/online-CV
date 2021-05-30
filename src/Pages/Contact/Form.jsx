@@ -67,10 +67,10 @@ export class Form extends Component {
         let templateParam = {
             to_name: "Alex",
             from_name: this.state.name,
-            message: this.state.message
+            message: this.state.message,
+            reply_to:this.state.email
         }
         emailjs.send("service_ogzl7n4", "template_l3ln8ib",templateParam,"user_WvMNmVXWN02GuqFs101UK")
-        // "user_WvMNmVXWN02GuqFs101UK"
           .then((result) => {
               console.log(result.text);
           }, (error) => {

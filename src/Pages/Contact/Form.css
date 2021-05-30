@@ -1,4 +1,4 @@
-.contact-form{
+.contact-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -6,7 +6,8 @@
     justify-self: center;
     max-width: 800px;
 }
-#form-div{
+
+#form-div {
     display: flex;
     margin: 50px;
     align-content: center;

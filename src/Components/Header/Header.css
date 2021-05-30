@@ -2,7 +2,6 @@
     min-width:50px;
     max-width: 50px;
     transition: transform 1s;
-    
 }
 
 .navbar-brand:hover {
@@ -22,9 +21,6 @@
 }
 
 .navbar-light .navbar-toggler {
-    /* border: 1px solid whitesmoke;
-    text-decoration-color: whitesmoke;
-    color: whitesmoke; */
     background-color: whitesmoke;
     justify-content:space-around;
 }
@@ -39,10 +35,6 @@ a.active {
 
 span.navbar-toggler-icon {
     text-decoration-color: tomato;
-}
-
-.show {
-    /* justify-content: flex-end; */
 }
 
 .navbar-withbackground {

@@ -1,8 +1,9 @@
-import { Portrait } from "../../Pages/About/Portrait/Portrait";
-import "./Header.css";
-import {Navbar, NavbarBrand, NavLink} from "react-bootstrap"
+import { Navbar, NavbarBrand, NavLink } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap";
 import { useEffect, useState, useRef } from "react";
+import { Portrait } from "../../Pages/About/Portrait/Portrait";
+
+import "./Header.css";
 
 export function Header(){
     const [navBackground, setNavBackground] = useState(false);

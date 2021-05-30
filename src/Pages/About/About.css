@@ -10,7 +10,6 @@
     background-color: whitesmoke;
 }
 
-
 article.description {
     text-indent: 10%;
     text-justify:distribute;
@@ -20,6 +19,7 @@ article.description {
     max-width: 600px;
     color: black;
 }
+
 article.description>p{
     font: black;
 }

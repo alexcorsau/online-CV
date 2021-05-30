@@ -38,8 +38,6 @@ q{
     width: 30px !important;
     height: 30px !important;
     background: none;
-    /* border: 1px solid grey;
-    border-radius: 50%; */
     border:none;
     display: flex;
     justify-items: center;
@@ -50,4 +48,17 @@ button>img{
     width: 15px;
     height: 15px;
     background:none;
+}
+
+.carousel-intro{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    margin: auto;
+}
+
+h6.carousel-intro{
+    justify-self: center;
+    text-align: center;
+    text-justify:newspaper;
 }

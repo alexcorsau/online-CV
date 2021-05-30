@@ -1,39 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import {Portrait} from "../About/Portrait/Portrait";
-import {user}  from "./Alex.js";
 import {Fragment} from "react";
-// import {useEffect, useState} from "react";
-
+import {useEffect, useState} from "react";
 import skillsIcon from "./pencil.png" 
 import workIcon from "./portfolio.png"
 import studiesIcon from "./mortarboard.png"
+
 import "./OnlineCV.css"
 
-// fetch("alex.json")
-// .then(r=>r.json())
-// .then(json=>console.log(json));
-
-
 export function OnlineCV(){
-    // const [user,setUser]=useState({});
-    // const getData=()=>{
-    //   fetch("alex.json")
-    //     .then(function(response){
-    //       console.log(response)
-    //       return response.json();
-    //     })
-    //     .then(function(myJson) {
-    //       console.log(myJson);
-    //       setUser(myJson);
-    //     });
-    // }
-    // useEffect(()=>{
-    //   getData()
-    // },[]);
+    const [user,setUser]=useState(null);
 
+    const getData=()=>{
+      fetch("alex.json")
+        .then(r=>r.json())
+        .then(json=>setUser(json));
+    }
     
-    return({user}!=null ?     
+    useEffect(()=>{
+      getData()
+    });
+
+    return(user!==null ? 
             <Container fluid>
                 <Row className="align-items-center">
                     <Col className="left-side col-3 offset-1">

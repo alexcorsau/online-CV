@@ -4,7 +4,8 @@
     justify-content: center;
     border-radius: 5px;
 }
-.send-container>button {
+
+.send-container > button {
     width: 100px;
     border-radius: 5px;
     background-color: whitesmoke;

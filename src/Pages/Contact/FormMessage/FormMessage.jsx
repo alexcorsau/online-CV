@@ -1,5 +1,3 @@
-import "./FormMessage.css"
-
 export function FormMessage(props) {
     let inputClass = "";
     if(props.invalid===false) {

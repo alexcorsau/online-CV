@@ -1,8 +1,7 @@
-import "./About.css"
-import { Portrait } from "./Portrait/Portrait"
-import {user} from "../OnlineCV/Alex"
+import { Portrait } from "./Portrait/Portrait";
+import {user} from "../OnlineCV/Alex";
 
-
+import "./About.css";
 
 export function About(){
     return(
@@ -25,9 +24,6 @@ export function About(){
                 </p>
                 <hr/>
             </article>
-            <div>
-                
-            </div>
         </div>
     )
 }

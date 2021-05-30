@@ -1,37 +1,37 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { CarouselItem } from 'react-bootstrap';
-import {CarouselPictures} from "./CarouselPictures"
+import {useEffect, useState} from "react";
+// import {CarouselPictures} from "./CarouselPictures"
 
 import "./Carousel.css"
 
-console.log(CarouselPictures);
+export function PicturesCarousel() {
+    
+    const [pictureSource,setPictureSource]=useState(null);
 
-export class DemoCarousel extends Component {
-    // const [index, setIndex] = useState(0);
-    // const handleSelect = (selectedIndex, e) => {
-    //     setIndex(selectedIndex);
-    // };
-
-    // handleClick=(index,item)=> {
-    //     console.log("clicked on a picture", index, item);
-    // };
-    render() {
-        return (
-            <Carousel pause="hover" controls="true">
+    const getData=()=>{
+      fetch("carouselSource.json")
+        .then(r=>r.json())
+        .then(json=>setPictureSource(json));
+    }
+    
+    useEffect(()=>{
+      getData()
+    });
+    
+    return ( pictureSource!==null ? 
+            <Carousel pause="hover" controls={true}>
                 {
-                    CarouselPictures.sources.map((element)=>(
-                        <CarouselItem key={CarouselPictures.sources.indexOf(element)}>
+                    pictureSource.sources.map((element)=>(
+                        <CarouselItem key={pictureSource.sources.indexOf(element)}>
                             <img className="carousel-picture" src={process.env.PUBLIC_URL+element} alt={element}/>
                             <Carousel.Caption>
-                                <p>Image number {CarouselPictures.sources.indexOf(element)+1}/{CarouselPictures.sources.length}</p>
+                                <p>Image number {pictureSource.sources.indexOf(element)+1}/{pictureSource.sources.length}</p>
                             </Carousel.Caption>
                         </CarouselItem>
                     ))
                 }
             </Carousel>
-        );
-    }
-};
-
-// ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+        : <p>"bad job at fetching data"</p>);
+}
