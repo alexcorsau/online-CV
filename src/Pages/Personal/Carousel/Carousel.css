@@ -1,27 +1,11 @@
 .carousel {   
     min-height: 150px;
     max-height: 600px;
-    /* min-width: 200px;
-    max-width: 900px; */
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* .carousel-inner {
-    max-width: 900px !important;
-} */
-
-/* .carousel-item{
-    height: fit-content;
-    margin-right: 0;
-} */
-
 .carousel-picture {
     max-width: 100%;
 }
-
-/* .active {
-    width: 100% !important;
-    height: 100% !important;
-} */
