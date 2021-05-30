@@ -16,6 +16,7 @@ q{
 .quote-owner {
     font-size: 12px;
     text-align: end;
+    color: whitesmoke;
 }
 .personal-div {
     max-width: 900px;

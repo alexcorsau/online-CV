@@ -5,20 +5,10 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useEffect, useState, useRef } from "react";
 
 export function Header(){
-    // const [navbarBackground,setNavbarBackground] = useState(false);
-    // const changeNavbarBackground = ()=> {
-    //     console.log(window.scrollY);
-    //     window.scrollY>=30 ? setNavbarBackground(true) : setNavbarBackground(false);
-    // }
-    // window.addEventListener("scroll",changeNavbarBackground);
-    // window
-
     const [navBackground, setNavBackground] = useState(false);
     const navRef = useRef();
-    // navRef.current = navBackground;
     
     const handleScroll = () => {
-        // console.log(document.getElementById("app").scrollTop);
         const show = document.getElementById("app").scrollTop > 50;
         console.log(show);
         if (navRef.current !== show) {
@@ -33,26 +23,24 @@ export function Header(){
     }, []);
     return(
             <Navbar collapseOnSelect expand="sm" sticky="top" className={navBackground ? "navbar-withbackground" : ""}>
-                <NavbarBrand href="/">
+                <NavbarBrand href="/about">
                     <Portrait/>
                 </NavbarBrand>
                 <Navbar.Toggle aria-controls="menu-buttons"/>
                 <Navbar.Collapse id="menu-buttons">
-                    <LinkContainer to="/">
-                        <NavLink>About Me</NavLink>
+                    <LinkContainer exact to="/">
+                        <NavLink active={false}>About Me</NavLink>
                     </LinkContainer>
-                    <LinkContainer to="/cv">
-                        <NavLink >CV</NavLink>
+                    <LinkContainer exact to="/cv">
+                        <NavLink active={false}>CV</NavLink>
                     </LinkContainer>
-                    <LinkContainer to="/personal">
-                        <NavLink>Personal</NavLink>
+                    <LinkContainer exact to="/personal">
+                        <NavLink active={false}>Personal</NavLink>
                     </LinkContainer>
-                    <LinkContainer to="/contact" >
-                        <NavLink>Contact</NavLink>
+                    <LinkContainer exact to="/contact" >
+                        <NavLink active={false}>Contact</NavLink>
                     </LinkContainer>
                 </Navbar.Collapse>
-            </Navbar>
-
-                
+            </Navbar>                
     );
 }

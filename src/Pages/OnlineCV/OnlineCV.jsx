@@ -10,14 +10,9 @@ import workIcon from "./portfolio.png"
 import studiesIcon from "./mortarboard.png"
 import "./OnlineCV.css"
 
-
-// console.log(user);
-// console.log(Object.entries(user));
-// console.log(user.Introduction);
-
- fetch("alex.json")
- .then(r=>r.json())
- .then(json=>console.log(json));
+// fetch("alex.json")
+// .then(r=>r.json())
+// .then(json=>console.log(json));
 
 
 export function OnlineCV(){

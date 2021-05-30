@@ -6,9 +6,7 @@ import { Header } from './Components/Header/Header';
 import { About } from './Pages/About/About';
 import { OnlineCV } from './Pages/OnlineCV/OnlineCV';
 import { Personal } from './Pages/Personal/Personal';
-import { Home } from './Pages/Home/Home';
 import { Form } from './Pages/Contact/Form';
-import { Contact } from './Pages/Contact/Contact';
 
 
 function App() {
