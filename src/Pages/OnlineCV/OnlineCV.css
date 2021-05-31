@@ -39,7 +39,7 @@ h1,h4,h5 {
     margin-right:10px;
 }
 
-a {
+.right-side >p>a {
     color: whitesmoke;
 }
 
