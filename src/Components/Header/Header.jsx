@@ -24,7 +24,7 @@ export function Header(){
     }, []);
     return(
             <Navbar collapseOnSelect expand="sm" sticky="top" className={navBackground ? "navbar-withbackground" : ""}>
-                <NavbarBrand href="/about">
+                <NavbarBrand href="/">
                     <Portrait/>
                 </NavbarBrand>
                 <Navbar.Toggle aria-controls="menu-buttons"/>
