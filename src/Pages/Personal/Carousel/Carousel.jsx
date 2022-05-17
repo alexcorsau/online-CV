@@ -10,9 +10,9 @@ export function PicturesCarousel() {
     const [pictureSource,setPictureSource]=useState(null);
 
     const getData=()=>{
-      fetch("carouselSource.json")
-        .then(r=>r.json())
-        .then(json=>setPictureSource(json));
+        fetch('../../../../public/carouselSource.json')
+            .then(r=>r.json())
+            .then(json=>setPictureSource(json));
     }
     
     useEffect(()=>{
