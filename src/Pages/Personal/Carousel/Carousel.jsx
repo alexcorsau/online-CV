@@ -17,7 +17,7 @@ export function PicturesCarousel() {
     
     useEffect(()=>{
       getData()
-    },[]);
+    },[pictureSource]);
     
     return ( pictureSource!==null ? 
             <Carousel pause="hover" controls={true}>
