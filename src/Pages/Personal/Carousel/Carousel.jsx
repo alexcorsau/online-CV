@@ -10,9 +10,15 @@ export function PicturesCarousel() {
     const [pictureSource,setPictureSource]=useState(null);
 
     const getData=()=>{
-        fetch('../../../../public/carouselSource.json')
+        fetch('./carouselSource.json',{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    })
             .then(r=>r.json())
             .then(json=>setPictureSource(json));
+            console.log("getData called!")
     }
     
     useEffect(()=>{
@@ -32,5 +38,5 @@ export function PicturesCarousel() {
                     ))
                 }
             </Carousel>
-        : <p>"bad job at fetching data"</p>);
+        : <p>"bad job at fetching data!!!!"</p>);
 }
