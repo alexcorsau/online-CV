@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { CarouselItem } from 'react-bootstrap';
 import {useEffect, useState} from "react";
-import { carouselSources } from '../resources';
 
 import "./Carousel.css"
 

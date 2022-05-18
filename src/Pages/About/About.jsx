@@ -1,12 +1,12 @@
 import { Portrait } from "./Portrait/Portrait";
-import {useEffect, useState} from "react";
+// import {useEffect, useState} from "react";
 import { alexCorsau } from "../Personal/resources";
 
 import "./About.css";
 
 export function About(){
-    const [user,setUser]=useState(alexCorsau);
-
+    // const [user,setUser]=useState(alexCorsau);
+    const user = alexCorsau;
     // const getData=()=>{
     //   fetch('./../Resources/alex.json')
     //     .then(r=>r.json())

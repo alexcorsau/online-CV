@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import {Portrait} from "../About/Portrait/Portrait";
 import {Fragment} from "react";
-import {useEffect, useState} from "react";
+// import {useEffect,useState} from "react";
 import skillsIcon from "./pencil.png" 
 import workIcon from "./portfolio.png"
 import studiesIcon from "./mortarboard.png"
@@ -11,7 +11,8 @@ import { alexCorsau } from "../Personal/resources";
 import "./OnlineCV.css"
 
 export function OnlineCV(){
-    const [user,setUser]=useState(alexCorsau);
+    // const [user,setUser]=useState(alexCorsau);
+    const user = alexCorsau;
 
     // const getData=()=>{
     //   fetch("alex.json")
