@@ -11,7 +11,6 @@ export function Header(){
     
     const handleScroll = () => {
         const show = document.getElementById("app").scrollTop > 50;
-        console.log(show);
         if (navRef.current !== show) {
           setNavBackground(show);
         }

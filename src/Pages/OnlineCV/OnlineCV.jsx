@@ -6,21 +6,22 @@ import {useEffect, useState} from "react";
 import skillsIcon from "./pencil.png" 
 import workIcon from "./portfolio.png"
 import studiesIcon from "./mortarboard.png"
+import { alexCorsau } from "../Personal/resources";
 
 import "./OnlineCV.css"
 
 export function OnlineCV(){
-    const [user,setUser]=useState(null);
+    const [user,setUser]=useState(alexCorsau);
 
-    const getData=()=>{
-      fetch("alex.json")
-        .then(r=>r.json())
-        .then(json=>setUser(json));
-    }
+    // const getData=()=>{
+    //   fetch("alex.json")
+    //     .then(r=>r.json())
+    //     .then(json=>setUser(json));
+    // }
     
-    useEffect(()=>{
-      getData()
-    },[]);
+    // useEffect(()=>{
+    //   getData()
+    // },[]);
 
     return(user!==null ? 
             <Container fluid>
