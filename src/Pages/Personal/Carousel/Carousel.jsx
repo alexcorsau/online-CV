@@ -24,7 +24,7 @@ export function PicturesCarousel() {
     
     useEffect(()=>{
         const getData = async ()=>{
-            await fetch('./carouselSource.json',{
+            fetch('./carouselSource.json',{
             // fetch('../../../../public/carouselSource.json',{
                 headers : { 
                     'Content-Type': 'application/json',
