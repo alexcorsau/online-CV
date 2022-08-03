@@ -9,23 +9,9 @@ export function PicturesCarousel() {
     
     const [pictureSource,setPictureSource]=useState(null);
 
-    // const getData = async ()=>{
-    //     fetch('./carouselSource.json',{
-    //     // fetch('../../../../public/carouselSource.json',{
-    //         headers : { 
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json',
-    //         }
-    //     })
-    //     .then(r=>r.json())
-    //     .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
-    //     console.log("getData called!")
-    // }
-    
-    useEffect(()=>{
-        const getData = async ()=>{
+    const getData = async ()=>{
+        try {
             fetch('./carouselSource.json',{
-            // fetch('../../../../public/carouselSource.json',{
                 headers : { 
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
@@ -33,8 +19,25 @@ export function PicturesCarousel() {
             })
             .then(r=>r.json())
             .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
-            console.log("getData called!")
+            console.log("getData called!");
+        } catch(error) {
+                console.log("error: ",error)
         }
+    }
+    
+    useEffect(()=>{
+        // const getData = async ()=>{
+        //     fetch('./carouselSource.json',{
+        //     // fetch('../../../../public/carouselSource.json',{
+        //         headers : { 
+        //             'Content-Type': 'application/json',
+        //             'Accept': 'application/json',
+        //         }
+        //     })
+        //     .then(r=>r.json())
+        //     .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
+        //     console.log("getData called!")
+        // }
 
         getData()
     },[]);
