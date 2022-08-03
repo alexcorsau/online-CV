@@ -1,0 +1,9 @@
+export const MORTARBOARD_ICON = require('./mortarboard.png');
+export const PENCIL_ICON = require('./pencil.png');
+export const PORTOFOLIO_ICON = require('./portfolio.png');
+export const MOUNTAIN_1 = require('./CarouselPictures/mountain1.jpg');
+export const MOUNTAIN_2 = require('./CarouselPictures/mountain2.jpg');
+export const MOUNTAIN_3 = require('./CarouselPictures/mountain3.jpg');
+export const MOUNTAIN_4 = require('./CarouselPictures/mountain4.jpg');
+export const MOUNTAIN_5 = require('./CarouselPictures/mountain5.jpg');
+export const MOUNTAIN_6 = require('./CarouselPictures/mountain6.jpg');

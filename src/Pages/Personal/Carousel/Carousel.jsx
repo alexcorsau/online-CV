@@ -9,20 +9,34 @@ export function PicturesCarousel() {
     
     const [pictureSource,setPictureSource]=useState(null);
 
-    const getData=()=>{
-        fetch('./carouselSource.json',{
-        // fetch('../../../../public/carouselSource.json',{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }).then(r=>r.json())
-            .then(json=>setPictureSource(json));
-            console.log("getData called!")
-    }
+    // const getData = async ()=>{
+    //     fetch('./carouselSource.json',{
+    //     // fetch('../../../../public/carouselSource.json',{
+    //         headers : { 
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json',
+    //         }
+    //     })
+    //     .then(r=>r.json())
+    //     .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
+    //     console.log("getData called!")
+    // }
     
     useEffect(()=>{
-      getData()
+        const getData = async ()=>{
+            await fetch('./carouselSource.json',{
+            // fetch('../../../../public/carouselSource.json',{
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                }
+            })
+            .then(r=>r.json())
+            .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
+            console.log("getData called!")
+        }
+
+        getData()
     },[]);
     
     return ( pictureSource!==null ? 
