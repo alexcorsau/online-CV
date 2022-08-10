@@ -1,3 +1,10 @@
 {
-    "sources":["./CarouselPictures/mountain1.jpg","./CarouselPictures/mountain2.jpg","./CarouselPictures/mountain3.jpg","./CarouselPictures/mountain4.jpg","./CarouselPictures/mountain5.jpg","./CarouselPictures/mountain6.jpg"]
+    "sources" : [
+        "src/assets/images/CarouselPictures/mountain1.jpg",
+        "src/assets/images/CarouselPictures/mountain2.jpg",
+         "src/assets/images/CarouselPictures/mountain3.jpg",
+         "src/assets/images/CarouselPictures/mountain4.jpg",
+        "src/assets/images/CarouselPictures/mountain5.jpg",
+        "src/assets/images/CarouselPictures/mountain6.jpg"
+    ]
 }

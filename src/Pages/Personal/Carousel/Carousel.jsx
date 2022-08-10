@@ -7,7 +7,7 @@ import "./Carousel.css"
 
 export function PicturesCarousel() {
     
-    const [pictureSource,setPictureSource]=useState(null);
+    const [pictureSource,setPictureSource] = useState(null);
 
     const getData = async ()=>{
         try {
