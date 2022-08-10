@@ -1,30 +1,17 @@
-# This is a basic workflow that is manually triggered
-
-name: Manual workflow
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
-on:
-  workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+- name: Firebase Trigger
+  # You may pin to the exact commit or the version.
+  # uses: w9jds/firebase-trigger@36a60eb1c6214680b0cf8189048804692652de91
+  uses: w9jds/firebase-trigger@v1.1.0
+  with:
+    # Admin credentials json for connecting to application
+    credentials:
+    # URL to the database you want to connect to
+    databaseUrl:
+    # Either `realtime` or `firestore`
+    databaseType: # optional, default is realtime
+    # Path to what you want to set in your database
+    path:
+    # Document to set for firestore
+    doc: # optional
+    # Value to be set
+    value: # optional
