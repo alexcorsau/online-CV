@@ -1,0 +1,17 @@
+- name: Firebase Trigger
+  # You may pin to the exact commit or the version.
+  # uses: w9jds/firebase-trigger@36a60eb1c6214680b0cf8189048804692652de91
+  uses: w9jds/firebase-trigger@v1.1.0
+  with:
+    # Admin credentials json for connecting to application
+    credentials:
+    # URL to the database you want to connect to
+    databaseUrl:
+    # Either `realtime` or `firestore`
+    databaseType: # optional, default is realtime
+    # Path to what you want to set in your database
+    path:
+    # Document to set for firestore
+    doc: # optional
+    # Value to be set
+    value: # optional
