@@ -6,46 +6,28 @@ import {useEffect, useState} from "react";
 import "./Carousel.css"
 
 export function PicturesCarousel() {
-    
-    const [pictureSource,setPictureSource] = useState(null);
+    const [pictureSource, setPictureSource] = useState();
 
     const getData = async ()=>{
         try {
-            fetch('./carouselSource.json',{
-                headers : { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                }
-            })
-            .then(r=>r.json())
-            .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
-            console.log("getData called!");
+            fetch('./carouselSource.json',)
+            .then(r => r.json())
+            .then(json => {
+                setPictureSource(json);
+            });
         } catch(error) {
                 console.log("error: ",error)
         }
     }
     
     useEffect(()=>{
-        // const getData = async ()=>{
-        //     fetch('./carouselSource.json',{
-        //     // fetch('../../../../public/carouselSource.json',{
-        //         headers : { 
-        //             'Content-Type': 'application/json',
-        //             'Accept': 'application/json',
-        //         }
-        //     })
-        //     .then(r=>r.json())
-        //     .then(json=>{setPictureSource(json);console.log("setPictureSource called!")});
-        //     console.log("getData called!")
-        // }
-
         getData()
     },[]);
     
     return ( pictureSource!==null ? 
             <Carousel pause="hover" controls={true}>
                 {
-                    pictureSource.sources.map((element)=>(
+                    pictureSource?.sources.map((element)=>(
                         <CarouselItem key={pictureSource.sources.indexOf(element)}>
                             <img className="carousel-picture" src={process.env.PUBLIC_URL+element} alt={element}/>
                             <Carousel.Caption>
