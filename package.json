@@ -9,7 +9,6 @@
     "bootstrap": "^4.6.0",
     "emailjs-com": "^2.6.4",
     "firebase": "^9.8.1",
-    "gatsby": "^2.19.38",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
